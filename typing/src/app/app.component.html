@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="column is-center">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-center">Typing Challenge</h1>
+
+  <p class="has-text-=center">
+    <span [class]="compare(letter,enteredText[i])" *ngFor="let letter of randomText.split(''); let i = index">{{letter}}</span>
+
+  </p>
+
+
+
+      <div class="field">
+        <input (input)="onInput($event.target.value)" class="input" type="text">
+      </div>
+      <div *ngIf="correct" class="box has-text-center">
+        <h1 class="title">Success</h1>
+      </div>
+    </div>
+  </div>
+</div>
